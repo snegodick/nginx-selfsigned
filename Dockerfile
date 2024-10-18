@@ -14,6 +14,7 @@ ENV NGX_FORWARD_TO="${NGX_FORWARD_TO}"
 ENTRYPOINT bash /opt/entry.sh
 
 #docker build -t snegowiki/nginx-selfsigned .
+# or docker buildx build --platform linux/amd64,linux/arm64 -t snegowiki/nginx-selfsigned --push .
 #docker login
 #docker push snegowiki/nginx-selfsigned
 #docker run -it -d --name app_revers -p 18443:443 -e NGX_FORWARD_TO=https://rbc.ru snegowiki/nginx-selfsigned
